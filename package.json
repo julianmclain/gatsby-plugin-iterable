@@ -1,0 +1,24 @@
+{
+  "name": "gatsby-plugin-iterable",
+  "version": "1.0.0",
+  "description": "Gatsby plugin for Iterable's Javascript SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianmclain/gatsby-plugin-iterable.git"
+  },
+  "keywords": [
+    "Iterable",
+    "Gatsby",
+    "Email Marketing"
+  ],
+  "author": "@julianmclain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julianmclain/gatsby-plugin-iterable/issues"
+  },
+  "homepage": "https://github.com/julianmclain/gatsby-plugin-iterable#readme"
+}
