@@ -31,4 +31,5 @@ src
 flow-typed
 coverage
 decls
+example
 examples

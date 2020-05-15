@@ -65,8 +65,9 @@ export default class IterableButton extends React.Component {
 ### Automatic Page View Tracking
 
 When the `trackPageViews: true` flag is set in your `gatsby-config.js` file, the
-plugin will automatically send a track request with the following structure on
-route change:
+plugin will automatically send a track request on route change. However, for it
+to work you need to have previously called `identify` for the user during the
+session. Here is the "Page Viewed" event schema:
 
 ```json
 // Event Name: "Page Viewed"

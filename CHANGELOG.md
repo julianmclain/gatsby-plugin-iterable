@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- Fix: Remove example/ directory
+
 ## [1.0.1] - May 14th, 2020
 
 - Fix: Use babel to build src files to project root directory
