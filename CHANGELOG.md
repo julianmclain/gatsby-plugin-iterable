@@ -3,6 +3,7 @@
 ## [Unreleased]
 
 - Fix: Remove example/ directory
+- Fix: Update how JS library is loaded
 
 ## [1.0.1] - May 14th, 2020
 
