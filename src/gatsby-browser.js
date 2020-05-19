@@ -1,8 +1,4 @@
 export const onRouteUpdate = ({ prevLocation }, { trackPageViews }) => {
-  if (trackPageViews) {
-    trackPage();
-  }
-
   const trackPage = () => {
     var _iaq = window._iaq || [];
     _iaq.push([
@@ -17,4 +13,8 @@ export const onRouteUpdate = ({ prevLocation }, { trackPageViews }) => {
       },
     ]);
   };
+
+  if (trackPageViews) {
+    trackPage();
+  }
 };

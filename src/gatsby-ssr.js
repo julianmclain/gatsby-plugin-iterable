@@ -1,6 +1,6 @@
 import React from "react";
 
-export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
+export const onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
   const { javascriptSdkKey } = pluginOptions;
 
   if (javascriptSdkKey) {
@@ -13,7 +13,9 @@ export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
       var _iaq = window._iaq || [];
       _iaq.push(["account", "${javascriptSdkKey}"]);`;
 
-    setHeadComponents([
+    // Injected after body content per Iterable recommendation
+    // https://support.iterable.com/hc/en-us/articles/205730709-Using-the-Iterable-JavaScript-SDK#installation
+    setPostBodyComponents([
       <script
         key="gatsby-plugin-iterable"
         dangerouslySetInnerHTML={{ __html: snippet }}

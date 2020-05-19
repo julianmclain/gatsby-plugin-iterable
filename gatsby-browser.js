@@ -7,10 +7,6 @@ var onRouteUpdate = function onRouteUpdate(_ref, _ref2) {
   var prevLocation = _ref.prevLocation;
   var trackPageViews = _ref2.trackPageViews;
 
-  if (trackPageViews) {
-    trackPage();
-  }
-
   var trackPage = function trackPage() {
     var _iaq = window._iaq || [];
 
@@ -22,6 +18,10 @@ var onRouteUpdate = function onRouteUpdate(_ref, _ref2) {
       url: window.location.href
     }]);
   };
+
+  if (trackPageViews) {
+    trackPage();
+  }
 };
 
 exports.onRouteUpdate = onRouteUpdate;
