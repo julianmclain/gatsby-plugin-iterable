@@ -7,8 +7,14 @@ var onRouteUpdate = function onRouteUpdate(_ref, _ref2) {
   var prevLocation = _ref.prevLocation;
   var trackPageViews = _ref2.trackPageViews;
 
+  if (trackPageViews) {
+    trackPage();
+  }
+
   var trackPage = function trackPage() {
-    window._iaq && window._iaq.push(["track", "Page Viewed", {
+    var _iaq = window._iaq || [];
+
+    _iaq.push(["track", "Page Viewed", {
       path: window.location.path,
       referrer: prevLocation ? prevLocation.href : "",
       search: window.location.search,
@@ -16,10 +22,6 @@ var onRouteUpdate = function onRouteUpdate(_ref, _ref2) {
       url: window.location.href
     }]);
   };
-
-  if (trackPageViews) {
-    trackPage();
-  }
 };
 
 exports.onRouteUpdate = onRouteUpdate;
