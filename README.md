@@ -1,5 +1,7 @@
 # gatsby-plugin-iterable
 
+[![Build Status](https://travis-ci.org/julianmclain/gatsby-plugin-iterable.svg?branch=master)](https://travis-ci.org/julianmclain/gatsby-plugin-iterable)
+
 Easily add Iterable tracking to your Gatsby site. Lightweight wrapper for the
 [Iterable JavaScript
 SDK](https://support.iterable.com/hc/en-us/articles/205730709-Using-the-Iterable-JavaScript-SDK).
