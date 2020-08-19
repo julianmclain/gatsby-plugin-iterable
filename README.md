@@ -14,8 +14,9 @@ npm install --save gatsby-plugin-iterable
 
 ## Setup
 
-Create a `Javascript SDK key` in Iterable. **Double check that it's a
-`Javascript SDK key` and not a Standard API key.**
+Create a `Javascript SDK key` in Iterable, and **confirm that it's a `Javascript SDK key`.** Never bundle a Standard API key in client-side code, whether
+JavaScript, mobile application code, or otherwise. Doing so will expose your
+Project data.
 
 In your gatsby-config.js file:
 
