@@ -6,7 +6,7 @@ SDK](https://support.iterable.com/hc/en-us/articles/205730709-Using-the-Iterable
 
 ## Install
 
-```
+```bash
 npm install --save gatsby-plugin-iterable
 ```
 
@@ -80,17 +80,19 @@ session. Here is the "Page Viewed" event schema:
 ```
 
 Currently, the plugin doesn't support customizing this payload. If you'd like to
-change it, your best bet is probably to set `trackPageViews: false` and
-implement Gatsby's `onRouteUpdate` API in your `gatsby-browser.js` file:
+modify it, you should set `trackPageViews: false` and implement Gatsby's
+`onRouteUpdate` API in your `gatsby-browser.js` file:
 
 ```javascript
 // gatsby-browser.js
 exports.onRouteUpdate = () => {
-  window._iaq && window._iaq.push([
+  var _iaq = window._iaq || [];
+  _iaq.push([
     "track",
     "Page Viewed",
     {
-      myTrack: "My rules"
+      myTrack: "My rules",
     },
-}
+  ]);
+};
 ```
