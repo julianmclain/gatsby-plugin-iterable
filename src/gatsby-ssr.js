@@ -4,7 +4,6 @@ export const onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
   const { javascriptSdkKey } = pluginOptions;
 
   if (javascriptSdkKey) {
-    // Iterable's analytics.js is currently unversioned :(
     const snippet = `(function () {
       var b = document.createElement('script'); b.type = 'text/javascript'; b.async = true;
       b.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'js.iterable.com/analytics.js';
